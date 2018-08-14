@@ -17,38 +17,32 @@ Download the package here and unpack it.
 &#160;4. GATK
 
 ## Usage
-SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]
+SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-e_cnv EXON_CNV_LIST] [-e_chr EXON_CNV_CHR][-e_tol EXON_CNV_TOL] [-e_cl EXON_CNV_LEN_FILE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-o_cnv OUT_CNV_LIST] [-o_chr OUT_CNV_CHR][-o_tol OUT_CNV_TOL] [-o_cl OUT_CNV_LEN_FILE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-ol OVERLAP_BPS] [-g_cnv GENOME_CNV_LIST][-g_chr GENOME_CNV_CHR] [-g_tol GENOME_CNV_TOL]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-g_cl GENOME_CNV_LEN_FILE] [-em] [-min_len CNV_MIN_LENGTH] [-max_len CNV_MAX_LENGTH]<br>
-				[-min_cn MIN_COPY_NUMBER] [-max_cn MAX_COPY_NUMBER]
-				[-p PROPORTION_INS] [-f MIN_FLANKING_LEN]
-				[-ms {random,uniform,gauss}]
-				[-ml {random,uniform,gauss,user}] [-c COVERAGE]
-				[-fs FRAG_SIZE] [-s STDEV] [-l READ_LENGTH]
-				[-tf TARGET_REGION_FLANK] [-pr]
-				[-q_min MIN_BASE_QUALITY] [-q_max MAX_BASE_QUALITY]
-				[-clr CONNECT_LEN_BETWEEN_REGIONS] [-o OUTPUT_DIR]
-				[-rn REARRANGED_OUTPUT_NAME] [-n NUM_SAMPLES] [-sc]
-				[-ssr] [-sb] [-picard PATH_TO_PICARD]
-				[-GATK PATH_TO_GATK]
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-min_cn MIN_COPY_NUMBER] [-max_cn MAX_COPY_NUMBER][-p PROPORTION_INS] [-f MIN_FLANKING_LEN]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-ms {random,uniform,gauss}][-ml {random,uniform,gauss,user}] [-c COVERAGE]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-fs FRAG_SIZE] [-s STDEV] [-l READ_LENGTH][-tf TARGET_REGION_FLANK] [-pr]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-q_min MIN_BASE_QUALITY] [-q_max MAX_BASE_QUALITY][-clr CONNECT_LEN_BETWEEN_REGIONS] [-o OUTPUT_DIR]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-rn REARRANGED_OUTPUT_NAME] [-n NUM_SAMPLES] [-sc][-ssr] [-sb] <br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-picard PATH_TO_PICARD][-GATK PATH_TO_GATK]
 
-
-optional arguments:
+### optional arguments:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
 | -h, --help                     |                       | show this help message and exit            |
 
-Mandatory inputs:
+### Mandatory inputs:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
 | -Type {g,e}                     |                     | simulation for WGS or WES            |
 | -G GENOME_FILE                     |                     | Reference genome FASTA file           |
 
-Inputs for simulating rearranged genomes for WES data:
+### Inputs for simulating rearranged genomes for WES data:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -63,7 +57,7 @@ Inputs for simulating rearranged genomes for WES data:
 | -o_cl OUT_CNV_LEN_FILE                     |                     | User supplied file of CNV length for CNVs outside of exons            |
 | -ol OVERLAP_BPS                     | 100                    | For each CNV overlapping with exons, number of minimum overlapping bps            |
 
-Inputs for simulating rearranged genomes for WGS data:
+### Inputs for simulating rearranged genomes for WGS data:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -72,7 +66,7 @@ Inputs for simulating rearranged genomes for WGS data:
 | -g_tol GENOME_CNV_TOL                     |                     | Total number of CNVs overlapping with exons to be generated across the genome (an estimate)           |
 | -g_cl GENOME_CNV_LEN_FILE                     |                     | User supplied file of CNV length           |
 
-General inputs for simulating rearranged genomes with CNVs:
+### General inputs for simulating rearranged genomes with CNVs:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -89,7 +83,7 @@ General inputs for simulating rearranged genomes with CNVs:
 | -Type {g,e}                     |                     | simulation for WGS or WES            |
 | -G GENOME_FILE                     |                     | Reference genome FASTA file           |
 
-Inputs for simulating short reads (fastq):
+### Inputs for simulating short reads (fastq):
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -103,7 +97,7 @@ Inputs for simulating short reads (fastq):
 | -q_max MAX_BASE_QUALITY | 80 | Maximum base quality for short reads simulation |
 | -clr CONNECT_LEN_BETWEEN_REGIONS |  | Maximum length bwtween target regions to connect the target regions. Only works with WES simulation. |
 
-Inputs for other simulation parameters:
+### Inputs for other simulation parameters:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |

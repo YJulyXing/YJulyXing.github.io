@@ -33,20 +33,20 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 
 |   Parameter                    |     Default value     |    Explanation                             | Restrictions |
 | :----------------------------: | :-------------------: | :----------------------------------------- | :----------- |
-| -h, --help                     |         -             | show this help message and exit            |              |
+| -h, --help | - | show this help message and exit | - |
 
 #### Mandatory arguments:
 
 |   Parameter                    |     Default value     |    Explanation                             | Restrictions |
 | :----------------------------: | :-------------------: | :----------------------------------------- | :----------- |
-| -Type {g,e}                    |          -            | simulation for WGS or WES                  |              |
-| -G GENOME_FILE                 |          -            | Reference genome FASTA file                |              |
+| -Type {g,e} | - | simulation for WGS or WES | - |
+| -G GENOME_FILE | - | Reference genome FASTA file  | - |
 
 #### Arguments for simulating rearranged genomes for WES data:
 
 |   Parameter                    |     Default value     |    Explanation                             | Restrictions |
 | :----------------------------: | :-------------------: | :----------------------------------------- | :----------- |
-| -T TARGET_REGION_FILE |  | Target region file | Must be used and can only be used with WES simulation. | - |
+| -T TARGET_REGION_FILE | - | Target region file | Must be used and can only be used with WES simulation. | - |
 | -e_cnv EXON_CNV_LIST | - | A user-defined list of CNVs overlapping with exons | One and only one of -e_cnv, -e_chr, -e_tol and -e_cl can be used with WES simulation to generate CNVs overlapping with exons.<br> If -e_cnv is provided, -em, -f, -ms, -ml, -ol, -min_cn, -max_cn, -min_len and -max_len will be ignored for CNVs overlapping with exons. |
 | -e_chr EXON_CNV_CHR | - | Number of CNVs overlapping with exons to be generated on each chromosome | Same as above. |
 | -e_tol EXON_CNV_TOL | - | Total number of CNVs overlapping with exons to be generated across the genome (an estimate) |  Same as above. |
@@ -131,7 +131,8 @@ Simulation for WGS and WES data is similar. WES simulation, however, need more p
 #### WGS data simulation:
 1. Simulate 10 CNVs of length 1 kb to 10 kb on each chromosome randomly, and at least 100 bps between each 2 CNVs. Don’t generate CNVs on missing sequences. Make a pair of test and control genomes.
 ``` bash
-SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir> -g_chr 10 -sc -min_len 1000 -max_len 10000 -f 100 -em
+SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir> \
+-g_chr 10 -sc -min_len 1000 -max_len 10000 -f 100 -em
 ```
 
 2. Simulate approximately 100 CNVs of length 1 kb to 10 kb on the whole genome, 30% of which are insertions, and at least 200 bps between each 2 CNVs. CNV start points and CNV lengths both follow gauss distribution. Generate CNVs on missing sequences. Make 10 test samples with prefix “test_wgs” and does not make any control. Make bam files as final output. Single-end sequencing is used.
@@ -174,9 +175,12 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 -ml user -e_cl <length_file_1> -o_cl <length_file_2> -clr 100 -em -n 10 -sc -pr -tf 50 -f 40 -ssr 
 ```
 
-# ReplaceNs.py
+***
+
+## ReplaceNs.py
 A small program to fix genomes which have too many ‘N’s to generate desired CNVs. It replaces all ‘N’s to ‘A’s, ‘T’s, ‘G’s, or ‘C’s randomly.
-## Usage
+***
+#### Usage:
 ``` bash
 ReplaceNs.py [-h] -i INPUT_FASTA_FILE -o OUTPUT_FASTA_FILE
 ```

@@ -33,44 +33,44 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
-| -h, --help                     |                       | show this help message and exit            |
+| -h, --help                     |         -             | show this help message and exit            |
 
 #### Mandatory inputs:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
 | -Type {g,e}                    |                       | simulation for WGS or WES                  |
-| -G GENOME_FILE                 |                       | Reference genome FASTA file                |
+| -G GENOME_FILE                 |          -            | Reference genome FASTA file                |
 
 #### Inputs for simulating rearranged genomes for WES data:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
 | -T TARGET_REGION_FILE |  | Target region file |
-| -e_cnv EXON_CNV_LIST |  | A user-defined list of CNVs overlapping with exons |
-| -e_chr EXON_CNV_CHR |  | Number of CNVs overlapping with exons to be generated on each chromosome |
-| -e_tol EXON_CNV_TOL |  | Total number of CNVs overlapping with exons to be generated across the genome (an estimate) |
-| -e_cl EXON_CNV_LEN_FILE |  | User supplied file of CNV length for CNVs overlapping with exons |
-| -o_cnv OUT_CNV_LIST |  | A user-defined list of CNVs outside of exons |
-| -o_chr OUT_CNV_CHR |  | Number of CNVs outside of exons to be generated on each chromosome |
-| -o_tol OUT_CNV_TOL |  | Total number of CNVs outside of exons to be generated across the genome (an estimate) |
-| -o_cl OUT_CNV_LEN_FILE |  | User supplied file of CNV length for CNVs outside of exons |
+| -e_cnv EXON_CNV_LIST | - | A user-defined list of CNVs overlapping with exons |
+| -e_chr EXON_CNV_CHR | - | Number of CNVs overlapping with exons to be generated on each chromosome |
+| -e_tol EXON_CNV_TOL | - | Total number of CNVs overlapping with exons to be generated across the genome (an estimate) |
+| -e_cl EXON_CNV_LEN_FILE | - | User supplied file of CNV length for CNVs overlapping with exons |
+| -o_cnv OUT_CNV_LIST | - | A user-defined list of CNVs outside of exons |
+| -o_chr OUT_CNV_CHR | - | Number of CNVs outside of exons to be generated on each chromosome |
+| -o_tol OUT_CNV_TOL | - | Total number of CNVs outside of exons to be generated across the genome (an estimate) |
+| -o_cl OUT_CNV_LEN_FILE | - | User supplied file of CNV length for CNVs outside of exons |
 | -ol OVERLAP_BPS | 100 | For each CNV overlapping with exons, number of minimum overlapping bps |
 
 #### Inputs for simulating rearranged genomes for WGS data:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
-| -g_cnv GENOME_CNV_LIST |  | A user-defined list of CNVs outside of exons |
-| -g_chr GENOME_CNV_CHR |  | Number of CNVs overlapping with exons to be generated on each chromosome |
-| -g_tol GENOME_CNV_TOL |  | Total number of CNVs overlapping with exons to be generated across the genome (an estimate) |
-| -g_cl GENOME_CNV_LEN_FILE |  | User supplied file of CNV length |
+| -g_cnv GENOME_CNV_LIST | - | A user-defined list of CNVs outside of exons |
+| -g_chr GENOME_CNV_CHR | - | Number of CNVs overlapping with exons to be generated on each chromosome |
+| -g_tol GENOME_CNV_TOL | - | Total number of CNVs overlapping with exons to be generated across the genome (an estimate) |
+| -g_cl GENOME_CNV_LEN_FILE | - | User supplied file of CNV length |
 
 #### General inputs for simulating rearranged genomes with CNVs:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
-| -em |                     | Exclude missing sequences for CNV simulation |
+| -em | - | Exclude missing sequences for CNV simulation |
 | -min_len CNV_MIN_LENGTH | 1000 |  Minimum CNV length in bps |
 | -max_len CNV_MAX_LENGTH | 100000 | Maximum CNV length in bps |
 | -min_cn MIN_COPY_NUMBER | 2 | Minimum copy number for insertions |
@@ -79,9 +79,9 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 | -f MIN_FLANKING_LEN | 50 |  Minimum length between each CNV |
 | -ms {random,uniform,gauss} | random | Distribution of CNVs |
 | -ml {random,uniform,gauss,user} | random | Distribution of CNV length |
-| -G GENOME_FILE |  | Reference genome FASTA file |
-| -Type {g,e} |  | simulation for WGS or WES |
-| -G GENOME_FILE |  | Reference genome FASTA file |
+| -G GENOME_FILE | - | Reference genome FASTA file |
+| -Type {g,e} | - | simulation for WGS or WES |
+| -G GENOME_FILE | - | Reference genome FASTA file |
 
 #### Inputs for simulating short reads (fastq):
 
@@ -92,10 +92,10 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 | -s STDEV | 20 | Standard deviation of fragment sizes |
 | -l READ_LENGTH | 50 | Read length of each short read |
 | -tf TARGET_REGION_FLANK | 0 | Length of flanking region up and down stream of target regions to be sequenced (this step take place after -clr). Only works with WES simulation. |
-| -pr |  | Select if paired-end sequencing |
+| -pr | - | Select if paired-end sequencing |
 | -q_min MIN_BASE_QUALITY | 0 | Minimum base quality for short reads simulation |
 | -q_max MAX_BASE_QUALITY | 80 | Maximum base quality for short reads simulation |
-| -clr CONNECT_LEN_BETWEEN_REGIONS |  | Maximum length bwtween target regions to connect the target regions. Only works with WES simulation. |
+| -clr CONNECT_LEN_BETWEEN_REGIONS | - | Maximum length bwtween target regions to connect the target regions. Only works with WES simulation. |
 
 #### Inputs for other simulation parameters:
 
@@ -104,11 +104,11 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 | -o OUTPUT_DIR | simulation_output | Output directory |
 | -rn REARRANGED_OUTPUT_NAME | test | Prefix of the rearranged outputs (do not include directory name) |
 | -n NUM_SAMPLES | 1 | Number of test samples to be generated |
-| -sc |  | Simulation for control genome |
-| -ssr |  | Simulate short reads (fastq) files |
-| -sb |  | Simulate bam files |
-| -picard PATH_TO_PICARD |  | Absolute path to picard |
-| -GATK PATH_TO_GATK |  | Absolute path to GATK |
+| -sc | - | Simulation for control genome |
+| -ssr | - | Simulate short reads (fastq) files |
+| -sb | - | Simulate bam files |
+| -picard PATH_TO_PICARD | - | Absolute path to picard |
+| -GATK PATH_TO_GATK | - | Absolute path to GATK |
 
 ## Inputs
 1. Sequence of a reference genome in fasta format.
@@ -133,18 +133,46 @@ Bam file(s) and index(es) for control genome (bam and bai, if -sc, -ssr and -sb 
 Simulation for WGS and WES data is similar. WES simulation, however, need more parameter settings.
 #### WGS data simulation:
 1. Simulate 10 CNVs of length 1 kb to 10 kb on each chromosome randomly, and at least 100 bps between each 2 CNVs. Don’t generate CNVs on missing sequences. Make a pair of test and control genomes.
-simulator/Simulator.py -Type g -G <input_fasta> -o <output_dir> -g_chr 10 -sc -min_len 1000 -max_len 10000 -f 100 -em
+``` bash
+SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir> -g_chr 10 -sc -min_len 1000 -max_len 10000 -f 100 -em
+```
+
 2. Simulate approximately 100 CNVs of length 1 kb to 10 kb on the whole genome, 30% of which are insertions, and at least 200 bps between each 2 CNVs. CNV start points and CNV lengths both follow gauss distribution. Generate CNVs on missing sequences. Make 10 test samples with prefix “test_wgs” and does not make any control. Make bam files as final output. Single-end sequencing is used.
-simulator/Simulator.py -Type g -G <input_fasta> -o <output_dir>  -g_tol 100 -p 0.3 -min_len 1000 -max_len 10000 -f 200 -ms gauss -ml gauss -ssr -sb -n 10 -rn test_wgs -picard <absolute_path_to_picard> -GATK < absolute_path_to_GATK>
+``` bash
+SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir>  -g_tol 100 -p 0.3 \
+-min_len 1000 -max_len 10000 -f 200 -ms gauss -ml gauss -ssr -sb -n 10 -rn test_wgs \
+-picard <absolute_path_to_picard> -GATK < absolute_path_to_GATK>
+```
+
 3. Distribution of CNV lengths are user provided. CNV start points follow uniform distribution. The copy numbers range from 5 to 15 for insertions. Don’t generate CNVs on missing sequences. Make a pair of test and control. Make short reads (fastq) file as final output using paired-end sequencing, 40 fold coverage, 100 bp read length, mean fragment size 300 bp and standard deviation of mean fragment size 10.
-simulator/Simulator.py -Type g -G <input_fasta> -o <output_dir> -ml user -g_cl <CNV length file> -min_cn 5 -max_cn 15 -em -ms uniform -sc -pr -ssr -c 40 -fs 300 -s 10 -l 100
+``` bash
+SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir> \
+-ml user -g_cl <CNV length file> -min_cn 5 -max_cn 15 -em -ms uniform \
+-sc -pr -ssr -c 40 -fs 300 -s 10 -l 100
+```
 
 #### WES data simulation:
 4. Simulate 10 CNVs overlapping with exons, and 1 CNV outside of exons randomly on each chromosome using default lengths, copy numbers, minimum distance between each of the 2 CNVs and proportion of insertions. For each CNV overlapping with exons, the overlapping length is not less than 90 bps. CNV start points and lengths follow gauss distribution. Don’t generate CNVs on missing sequences. Make 5 test samples and control. Generate short reads (fastq) files by default settings, using paired-end sequencing.
-simulator/Simulator.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> -e_chr 10 -o_chr 1 -ol 90 -ms gauss -ml gauss -em -n 5 -sc -pr -ssr 
+``` bash
+SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
+-e_chr 10 -o_chr 1 -ol 90 -ms gauss -ml gauss -em -n 5 -sc -pr -ssr
+```
+
 5. Simulate CNVs overlapping with exons from the provided CNV list. Simulate approximately 20 CNVs outside of exons randomly on the whole genome with default settings. For CNVs outside of exons, don’t generate CNVs on missing sequences. Make a pair of test and control genome.
-simulator/Simulator.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> -e_cnv <list_of_CNV_overlapping_with_exons> -o_tol 20 -em -sc 
+``` bash
+SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
+-e_cnv <list_of_CNV_overlapping_with_exons> -o_tol 20 -em -sc 
+```
+
 6. Simulate approximately 20 CNVs overlapping with exons on the whole genome, and at least 100 bps between each 2 CNVs. Don’t generate CNVs outside of exons. Don’t generate CNVs on missing sequences. Paired-end sequencing, with minimum base quality is 20 and maximum base quality is 60. Make a pair of test and control. The final outputs are bam files.
-simulator/Simulator.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> -e_tol 20 -f 100 -em -sc -pr -ql 20 -qu 60 -ssr -sb -picard <absolute_path_to_picard> -GATK <absolute_path_to_GATK>
+``` bash
+SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
+-e_tol 20 -f 100 -em -sc -pr -ql 20 -qu 60 -ssr -sb \
+-picard <absolute_path_to_picard> -GATK <absolute_path_to_GATK>
+```
+
 7. Simulate CNVs overlapping with exons and outside of exons from provided files of CNV lengths. If the length between 2 target regions are smaller than 100 bps, connect them as 1 target region. Don’t generate CNVs on missing sequences. Make 10 test samples and control. Use paired-end sequencing; sequence 50 bp up and down stream of the target regions (after connecting the target regions) as well. The final output is short reads (fastq) files with coverage of 40. 
-simulator/Simulator.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> -ml user -e_cl <length_file_1> -o_cl <length_file_2> -clr 100 -em -n 10 -sc -pr -ef 50 -f 40 -ssr 
+``` bash
+SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
+-ml user -e_cl <length_file_1> -o_cl <length_file_2> -clr 100 -em -n 10 -sc -pr -ef 50 -f 40 -ssr 
+```

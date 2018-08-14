@@ -174,9 +174,12 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
 -ml user -e_cl <length_file_1> -o_cl <length_file_2> -clr 100 -em -n 10 -sc -pr -tf 50 -f 40 -ssr 
 ```
+<br>
 
 ***
+
 <br>
+
 ## ReplaceNs.py
 A small program to fix genomes which have too many ‘N’s to generate desired CNVs. It replaces all ‘N’s to ‘A’s, ‘T’s, ‘G’s, or ‘C’s randomly.
 

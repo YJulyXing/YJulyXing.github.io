@@ -8,13 +8,13 @@ Download the package here and unpack it.
 ## Requirements
 * General use: Python 2.7. Required python packages: argparse, random, os, subprocess, math, sys, time
 * To generate short reads (fastq) outputs (see requirements for ART_illumina at https://www.niehs.nih.gov/research/resources/software/biostatistics/art/index.cfm): 
- 1. GNU g++ 4.0 or above (http://gcc.gnu.org/install) 
- 2. GNU gsl library (http://www.gnu.org/s/gsl/)
+&#160;1. GNU g++ 4.0 or above (http://gcc.gnu.org/install) 
+&#160;2. GNU gsl library (http://www.gnu.org/s/gsl/)
 * To generate bam outputs: 
- 1. Samtools
- 2. BWA
- 3. picard 2.15
- 4. GATK
+&#160;1. Samtools
+&#160;2. BWA
+&#160;3. picard 2.15
+&#160;4. GATK
 
 ## Usage
 SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]

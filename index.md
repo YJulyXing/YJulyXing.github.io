@@ -17,6 +17,7 @@ Download the package here and unpack it.
 &#160;4. GATK
 
 ## Usage
+``` bash
 SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-e_cnv EXON_CNV_LIST] [-e_chr EXON_CNV_CHR] [-e_tol EXON_CNV_TOL] [-e_cl EXON_CNV_LEN_FILE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-o_cnv OUT_CNV_LIST] [-o_chr OUT_CNV_CHR] [-o_tol OUT_CNV_TOL] [-o_cl OUT_CNV_LEN_FILE]<br>
@@ -28,6 +29,7 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-q_min MIN_BASE_QUALITY] [-q_max MAX_BASE_QUALITY] [-clr CONNECT_LEN_BETWEEN_REGIONS]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-o OUTPUT_DIR] [-rn REARRANGED_OUTPUT_NAME] [-n NUM_SAMPLES] [-sc]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-ssr] [-sb] [-picard PATH_TO_PICARD] [-GATK PATH_TO_GATK]
+```
 
 #### optional arguments:
 
@@ -178,7 +180,6 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 
 ***
 
-<br>
 
 ## ReplaceNs.py
 A small program to fix genomes which have too many ‘N’s to generate desired CNVs. It replaces all ‘N’s to ‘A’s, ‘T’s, ‘G’s, or ‘C’s randomly.

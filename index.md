@@ -1,4 +1,4 @@
-title: SimulateCNVs
+#SimulateCNVs
 ---
 A tool for simulating CNVs for WES or WGS data. It simulates rearranged genomes, short reads (fastq) and bam files as desired by the user. There are several ways and distributions to choose from to generate desired CNVs.
 

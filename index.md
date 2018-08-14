@@ -6,15 +6,15 @@ A tool for simulating CNVs for WES or WGS data. It simulates rearranged genomes,
 Download the package here and unpack it.
 
 ## Requirements
-* General use: [Python 2.7] (https://www.python.org/download/releases/2.7/). Required python packages: argparse, random, os, subprocess, math, sys, time
-* To generate short reads (fastq) outputs (see requirements for [ART_illumina] (https://www.niehs.nih.gov/research/resources/software/biostatistics/art/index.cfm): <br>
-&#160;1. [GNU g++ 4.0 or above] (http://gcc.gnu.org/install) <br>
-&#160;2. [GNU gsl library] (http://www.gnu.org/s/gsl/)
+* General use: [Python 2.7](https://www.python.org/download/releases/2.7/). Required python packages: argparse, random, os, subprocess, math, sys, time
+* To generate short reads (fastq) outputs (see requirements for [ART_illumina](https://www.niehs.nih.gov/research/resources/software/biostatistics/art/index.cfm): <br>
+&#160;1. [GNU g++ 4.0 or above](http://gcc.gnu.org/install) <br>
+&#160;2. [GNU gsl library](http://www.gnu.org/s/gsl/)
 * To generate bam outputs: <br>
-&#160;1. [Samtools] (http://samtools.sourceforge.net/) <br>
-&#160;2. [BWA] (http://bio-bwa.sourceforge.net/) <br>
-&#160;3. [picard 2.15.0] (https://broadinstitute.github.io/picard/) <br>
-&#160;4. [GATK] (https://software.broadinstitute.org/gatk/)
+&#160;1. [Samtools](http://samtools.sourceforge.net/) <br>
+&#160;2. [BWA](http://bio-bwa.sourceforge.net/) <br>
+&#160;3. [picard 2.15.0](https://broadinstitute.github.io/picard/) <br>
+&#160;4. [GATK](https://software.broadinstitute.org/gatk/)
 
 ## Usage
 ``` bash

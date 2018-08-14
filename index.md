@@ -118,13 +118,13 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 
 ## Outputs
 1. Rearranged genome(s) (fasta)<br>
-&#160;&#160;Target regions for rearranged genome(s) (bed)<br>
-&#160;&#160;Control genome (fasta, if -sc is chosen)<br>
-&#160;&#160;Target regions for control (bed, always generated in case -clr is chosen to make changes to target regions)
+&#160;Target regions for rearranged genome(s) (bed)<br>
+&#160;Control genome (fasta, if -sc is chosen)<br>
+&#160;Target regions for control (bed, always generated in case -clr is chosen to make changes to target regions)
 2. List(s) of CNVs overlapping with exons (bed)<br>
-&#160;&#160;List(s) of CNVs outside of exons (bed, if chosen to generate CNVs outside of exons)
+&#160;List(s) of CNVs outside of exons (bed, if chosen to generate CNVs outside of exons)
 3. Short reads for rearranged genome(s) (fastq, if -ssr is chosen)<br>
-&#160;&#160;Short reads for control genome(s) (fastq, if -sc and -ssr is chosen)
+&#160;Short reads for control genome(s) (fastq, if -sc and -ssr is chosen)
 4. Indexes for the control genome (.dict, .fai, .sa, etc., if -ssr and -sb is chosen and no indexes exist in the output directory)
 5. Bam file(s) and index(es) for rearranged genome(s) (bam and bai, if -ssr and -sb is chosen)<br>
-&#160;&#160;Bam file(s) and index(es) for control genome (bam and bai, if -sc, -ssr and -sb is chosen)
+&#160;Bam file(s) and index(es) for control genome (bam and bai, if -sc, -ssr and -sb is chosen)

@@ -18,14 +18,10 @@ Download the package here and unpack it.
 
 ## Usage
 SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]
-                [-e_cnv EXON_CNV_LIST] [-e_chr EXON_CNV_CHR]
-				[-e_tol EXON_CNV_TOL] [-e_cl EXON_CNV_LEN_FILE]
-				[-o_cnv OUT_CNV_LIST] [-o_chr OUT_CNV_CHR]
-				[-o_tol OUT_CNV_TOL] [-o_cl OUT_CNV_LEN_FILE]
-				[-ol OVERLAP_BPS] [-g_cnv GENOME_CNV_LIST]
-				[-g_chr GENOME_CNV_CHR] [-g_tol GENOME_CNV_TOL]
-				[-g_cl GENOME_CNV_LEN_FILE] [-em]
-				[-min_len CNV_MIN_LENGTH] [-max_len CNV_MAX_LENGTH]
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-e_cnv EXON_CNV_LIST] [-e_chr EXON_CNV_CHR][-e_tol EXON_CNV_TOL] [-e_cl EXON_CNV_LEN_FILE]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-o_cnv OUT_CNV_LIST] [-o_chr OUT_CNV_CHR][-o_tol OUT_CNV_TOL] [-o_cl OUT_CNV_LEN_FILE]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-ol OVERLAP_BPS] [-g_cnv GENOME_CNV_LIST][-g_chr GENOME_CNV_CHR] [-g_tol GENOME_CNV_TOL]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-g_cl GENOME_CNV_LEN_FILE] [-em] [-min_len CNV_MIN_LENGTH] [-max_len CNV_MAX_LENGTH]<br>
 				[-min_cn MIN_COPY_NUMBER] [-max_cn MAX_COPY_NUMBER]
 				[-p PROPORTION_INS] [-f MIN_FLANKING_LEN]
 				[-ms {random,uniform,gauss}]

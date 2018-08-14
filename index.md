@@ -134,47 +134,49 @@ Simulation for WGS and WES data is similar. WES simulation, however, need more p
 1. Simulate 10 CNVs of length 1 kb to 10 kb on each chromosome randomly, and at least 100 bps between each 2 CNVs. Don’t generate CNVs on missing sequences. Make a pair of test and control genomes.
 ``` bash
 SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir> \
--g_chr 10 -sc -min_len 1000 -max_len 10000 -f 100 -em
+                              -g_chr 10 -sc -min_len 1000 -max_len 10000 -f 100 -em
 ```
 
 2. Simulate approximately 100 CNVs of length 1 kb to 10 kb on the whole genome, 30% of which are insertions, and at least 200 bps between each 2 CNVs. CNV start points and CNV lengths both follow gauss distribution. Generate CNVs on missing sequences. Make 10 test samples with prefix “test_wgs” and does not make any control. Make bam files as final output. Single-end sequencing is used.
 ``` bash
 SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir>  -g_tol 100 -p 0.3 \
--min_len 1000 -max_len 10000 -f 200 -ms gauss -ml gauss -ssr -sb -n 10 -rn test_wgs \
--picard <absolute_path_to_picard> -GATK < absolute_path_to_GATK>
+                              -min_len 1000 -max_len 10000 -f 200 -ms gauss -ml gauss -ssr -sb \
+                              -n 10 -rn test_wgs -picard <absolute_path_to_picard> \
+                              -GATK < absolute_path_to_GATK>
 ```
 
 3. Distribution of CNV lengths are user provided. CNV start points follow uniform distribution. The copy numbers range from 5 to 15 for insertions. Don’t generate CNVs on missing sequences. Make a pair of test and control. Make short reads (fastq) file as final output using paired-end sequencing, 40 fold coverage, 100 bp read length, mean fragment size 300 bp and standard deviation of mean fragment size 10.
 ``` bash
 SimulateCNVs/SimulateCNVs.py -Type g -G <input_fasta> -o <output_dir> \
--ml user -g_cl <CNV length file> -min_cn 5 -max_cn 15 -em -ms uniform \
--sc -pr -ssr -c 40 -fs 300 -s 10 -l 100
+                              -ml user -g_cl <CNV length file> -min_cn 5 -max_cn 15 \
+                              -em -ms uniform -sc -pr -ssr -c 40 -fs 300 -s 10 -l 100
 ```
 
 #### WES data simulation:
 4. Simulate 10 CNVs overlapping with exons, and 1 CNV outside of exons randomly on each chromosome using default lengths, copy numbers, minimum distance between each of the 2 CNVs and proportion of insertions. For each CNV overlapping with exons, the overlapping length is not less than 90 bps. CNV start points and lengths follow gauss distribution. Don’t generate CNVs on missing sequences. Make 5 test samples and control. Generate short reads (fastq) files by default settings, using paired-end sequencing.
 ``` bash
 SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
--e_chr 10 -o_chr 1 -ol 90 -ms gauss -ml gauss -em -n 5 -sc -pr -ssr
+                              -e_chr 10 -o_chr 1 -ol 90 -ms gauss -ml gauss -em -n 5 -sc -pr -ssr
 ```
 
 5. Simulate CNVs overlapping with exons from the provided CNV list. Simulate approximately 20 CNVs outside of exons randomly on the whole genome with default settings. For CNVs outside of exons, don’t generate CNVs on missing sequences. Make a pair of test and control genome.
 ``` bash
 SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
--e_cnv <list_of_CNV_overlapping_with_exons> -o_tol 20 -em -sc 
+                              -e_cnv <list_of_CNV_overlapping_with_exons> -o_tol 20 -em -sc 
 ```
 
 6. Simulate approximately 20 CNVs overlapping with exons on the whole genome, and at least 100 bps between each 2 CNVs. Don’t generate CNVs outside of exons. Don’t generate CNVs on missing sequences. Paired-end sequencing, with minimum base quality is 20 and maximum base quality is 60. Make a pair of test and control. The final outputs are bam files.
 ``` bash
 SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
--e_tol 20 -f 100 -em -sc -pr -ql 20 -qu 60 -ssr -sb \
--picard <absolute_path_to_picard> -GATK <absolute_path_to_GATK>
+                              -e_tol 20 -f 100 -em -sc -pr -ql 20 -qu 60 -ssr -sb \
+                              -picard <absolute_path_to_picard> -GATK <absolute_path_to_GATK>
 ```
 
 7. Simulate CNVs overlapping with exons and outside of exons from provided files of CNV lengths. If the length between 2 target regions are smaller than 100 bps, connect them as 1 target region. Don’t generate CNVs on missing sequences. Make 10 test samples and control. Use paired-end sequencing; sequence 50 bp up and down stream of the target regions (after connecting the target regions) as well. The final output is short reads (fastq) files with coverage of 40. 
 ``` bash
 SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <output_dir> \
--ml user -e_cl <length_file_1> -o_cl <length_file_2> -clr 100 -em -n 10 -sc -pr -tf 50 -f 40 -ssr 
+                              -ml user -e_cl <length_file_1> -o_cl <length_file_2> \
+                              -clr 100 -em -n 10 -sc -pr -tf 50 -f 40 -ssr 
 ```
 
 

@@ -25,24 +25,24 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-min_cn MIN_COPY_NUMBER] [-max_cn MAX_COPY_NUMBER][-p PROPORTION_INS] [-f MIN_FLANKING_LEN]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-ms {random,uniform,gauss}][-ml {random,uniform,gauss,user}] [-c COVERAGE]<br>
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-fs FRAG_SIZE] [-s STDEV] [-l READ_LENGTH][-tf TARGET_REGION_FLANK] [-pr]<br>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-q_min MIN_BASE_QUALITY] [-q_max MAX_BASE_QUALITY][-clr CONNECT_LEN_BETWEEN_REGIONS] [-o OUTPUT_DIR]<br>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-rn REARRANGED_OUTPUT_NAME] [-n NUM_SAMPLES] [-sc][-ssr] [-sb] <br>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-picard PATH_TO_PICARD][-GATK PATH_TO_GATK]
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-q_min MIN_BASE_QUALITY] [-q_max MAX_BASE_QUALITY][-clr CONNECT_LEN_BETWEEN_REGIONS]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-o OUTPUT_DIR][-rn REARRANGED_OUTPUT_NAME] [-n NUM_SAMPLES] [-sc]<br>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[-ssr] [-sb] [-picard PATH_TO_PICARD][-GATK PATH_TO_GATK]
 
-### optional arguments:
+#### optional arguments:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
 | -h, --help                     |                       | show this help message and exit            |
 
-### Mandatory inputs:
+#### Mandatory inputs:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
 | -Type {g,e}                     |                     | simulation for WGS or WES            |
 | -G GENOME_FILE                     |                     | Reference genome FASTA file           |
 
-### Inputs for simulating rearranged genomes for WES data:
+#### Inputs for simulating rearranged genomes for WES data:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -57,7 +57,7 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 | -o_cl OUT_CNV_LEN_FILE                     |                     | User supplied file of CNV length for CNVs outside of exons            |
 | -ol OVERLAP_BPS                     | 100                    | For each CNV overlapping with exons, number of minimum overlapping bps            |
 
-### Inputs for simulating rearranged genomes for WGS data:
+#### Inputs for simulating rearranged genomes for WGS data:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -66,7 +66,7 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 | -g_tol GENOME_CNV_TOL                     |                     | Total number of CNVs overlapping with exons to be generated across the genome (an estimate)           |
 | -g_cl GENOME_CNV_LEN_FILE                     |                     | User supplied file of CNV length           |
 
-### General inputs for simulating rearranged genomes with CNVs:
+#### General inputs for simulating rearranged genomes with CNVs:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -83,7 +83,7 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 | -Type {g,e}                     |                     | simulation for WGS or WES            |
 | -G GENOME_FILE                     |                     | Reference genome FASTA file           |
 
-### Inputs for simulating short reads (fastq):
+#### Inputs for simulating short reads (fastq):
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |
@@ -97,7 +97,7 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]<br>
 | -q_max MAX_BASE_QUALITY | 80 | Maximum base quality for short reads simulation |
 | -clr CONNECT_LEN_BETWEEN_REGIONS |  | Maximum length bwtween target regions to connect the target regions. Only works with WES simulation. |
 
-### Inputs for other simulation parameters:
+#### Inputs for other simulation parameters:
 
 |   Parameter                    |     Default value     |    Explanation                             |
 | :----------------------------: | :-------------------: | :----------------------------------------- |

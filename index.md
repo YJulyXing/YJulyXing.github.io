@@ -39,7 +39,7 @@ SimulateCNVs.py [-h] -Type {g,e} -G GENOME_FILE [-T TARGET_REGION_FILE]
 ```
 
 ## Arguments
-#### optional arguments:
+#### Optional arguments:
 
 |   Parameter                    |     Default value     |    Explanation                             | Restrictions |
 | :----------------------------: | :-------------------: | :----------------------------------------- | :----------- |

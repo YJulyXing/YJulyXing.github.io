@@ -2,8 +2,9 @@
 
 **Maintainer: Yue "July" Xing**<br>
 **Author: Yue "July" Xing**<br>
-**Date: 08/15/2018**<br>
-**Version: 1**
+**Version: 1**<br>
+**Date: 08/15/2018**
+
 
 ## Description
 A tool for simulating CNVs for WES or WGS data. It simulates rearranged genomes, short reads (fastq) and bam files as desired by the user. There are several ways and distributions to choose from to generate desired CNVs.
@@ -194,8 +195,8 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 
 **Maintainer: Yue "July" Xing**<br>
 **Author: Yue "July" Xing**<br>
-**Date: 08/15/2018**<br>
-**Version: 1**
+**Version: 1**<br>
+**Date: 08/15/2018**
 
 ### Description
 A small program to fix genomes which have too many ‘N’s to generate desired CNVs. It replaces all ‘N’s in the genome sequence to ‘A’s, ‘T’s, ‘G’s, or ‘C’s randomly.
@@ -211,6 +212,6 @@ It is included in the package of SimulateCNVs.
 ReplaceNs.py [-h] -i INPUT_FASTA_FILE -o OUTPUT_FASTA_FILE
 ```
 ### Arguments
--h: help
--i: input genome sequence in fasta format
+-h: help<br>
+-i: input genome sequence in fasta format<br>
 -o output genome sequence in fasta format

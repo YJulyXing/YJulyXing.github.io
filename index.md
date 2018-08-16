@@ -1,8 +1,8 @@
 # SimulateCNVs
 
-**Maintainer: Yue "July" Xing**
-**Author: Yue "July" Xing**
-**Date: 08/15/2018**
+**Maintainer: Yue "July" Xing**<br>
+**Author: Yue "July" Xing**<br>
+**Date: 08/15/2018**<br>
 **Version: 1**
 
 ## Description
@@ -192,9 +192,9 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 
 ## ReplaceNs.py
 
-**Maintainer: Yue "July" Xing**
-**Author: Yue "July" Xing**
-**Date: 08/15/2018**
+**Maintainer: Yue "July" Xing**<br>
+**Author: Yue "July" Xing**<br>
+**Date: 08/15/2018**<br>
 **Version: 1**
 
 ### Description
@@ -206,7 +206,7 @@ It is included in the package of SimulateCNVs.
 ### Requirements
 [Python 2.7](https://www.python.org/download/releases/2.7/)
 
-#### Usage
+### Usage
 ``` bash
 ReplaceNs.py [-h] -i INPUT_FASTA_FILE -o OUTPUT_FASTA_FILE
 ```

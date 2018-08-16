@@ -1,9 +1,9 @@
 # SimulateCNVs
 
-#### Maintainer: Yue "July" Xing
-#### Author: Yue "July" Xing
-#### Date: 08/15/2018
-#### Version: 1
+**Maintainer: Yue "July" Xing**
+**Author: Yue "July" Xing**
+**Date: 08/15/2018**
+**Version: 1**
 
 ## Description
 A tool for simulating CNVs for WES or WGS data. It simulates rearranged genomes, short reads (fastq) and bam files as desired by the user. There are several ways and distributions to choose from to generate desired CNVs.
@@ -192,10 +192,10 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 
 ## ReplaceNs.py
 
-#### Maintainer: Yue "July" Xing
-#### Author: Yue "July" Xing
-#### Date: 08/15/2018
-#### Version: 1
+**Maintainer: Yue "July" Xing**
+**Author: Yue "July" Xing**
+**Date: 08/15/2018**
+**Version: 1**
 
 ### Description
 A small program to fix genomes which have too many ‘N’s to generate desired CNVs. It replaces all ‘N’s in the genome sequence to ‘A’s, ‘T’s, ‘G’s, or ‘C’s randomly.
@@ -204,7 +204,7 @@ A small program to fix genomes which have too many ‘N’s to generate desired 
 It is included in the package of SimulateCNVs.
 
 ### Requirements
-[Python 2.7](https://www.python.org/download/releases/2.7/).
+[Python 2.7](https://www.python.org/download/releases/2.7/)
 
 #### Usage
 ``` bash

@@ -206,7 +206,7 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 **Maintainer: Yue "July" Xing**<br>
 **Author: Yue "July" Xing**<br>
 **Version: 1.0**<br>
-**Date: 08/13/2018**
+**Date: 06/27/2018**
 
 ### Description
 A small program to fix genomes which have too many ‘N’s to generate desired CNVs. It replaces all ‘N’s in the genome sequence to ‘A’s, ‘T’s, ‘G’s, or ‘C’s randomly.

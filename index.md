@@ -2,15 +2,18 @@
 
 **Maintainer: Yue "July" Xing**<br>
 **Author: Yue "July" Xing**<br>
-**Version: 1**<br>
-**Date: 08/13/2018**
+**Version: 1.0**<br>
+**Date: 06/27/2018**
 
 
 ## Description
 A tool for simulating CNVs for WES or WGS data. It simulates rearranged genomes, short reads (fastq) and bam files as desired by the user. There are several ways and distributions to choose from to generate desired CNVs.
 
 ## Installation
-Download the package here and unpack it.
+Download the package [here](https://github.com/YJulyXing/SimulateCNVs) and unpack it.
+``` bash
+tar -zxvf SimulateCNVs.tar.gz
+```
 
 ## Requirements
 * General use: [Python 2.7](https://www.python.org/download/releases/2.7/). Required python packages: argparse, random, os, subprocess, math, sys, time
@@ -195,7 +198,7 @@ SimulateCNVs/SimulateCNVs.py -Type e -G <input_fasta> -T <target_region> -o <out
 
 **Maintainer: Yue "July" Xing**<br>
 **Author: Yue "July" Xing**<br>
-**Version: 1**<br>
+**Version: 1.0**<br>
 **Date: 08/13/2018**
 
 ### Description

@@ -15,6 +15,7 @@ No installation required. Simply type:
 git clone https://github.com/YJulyXing/SimulateCNVs.git
 ```
 And it will be ready to use.
+The source codes are in https://github.com/YJulyXing/SimulateCNVs.
 
 ## Requirements
 * General use: [Python 2.7](https://www.python.org/download/releases/2.7/). Required python packages: argparse, random, os, subprocess, math, sys, time

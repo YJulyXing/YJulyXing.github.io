@@ -10,11 +10,10 @@
 A tool for simulating CNVs for WES or WGS data. It simulates rearranged genomes, short reads (fastq) and bam files as desired by the user. There are several ways and distributions to choose from to generate desired CNVs.
 
 ## Installation
-No installation required. Simply type:
+No installation required. Simply type the following and it will be ready to use.
 ``` bash
 git clone https://github.com/YJulyXing/SimulateCNVs.git
 ```
-And it will be ready to use.<br>
 The source codes are in https://github.com/YJulyXing/SimulateCNVs.
 
 ## Requirements

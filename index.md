@@ -14,7 +14,7 @@ No installation required. Simply type:
 ``` bash
 git clone https://github.com/YJulyXing/SimulateCNVs.git
 ```
-And it will be ready to use.
+And it will be ready to use.<br>
 The source codes are in https://github.com/YJulyXing/SimulateCNVs.
 
 ## Requirements
